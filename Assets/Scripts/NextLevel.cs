@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class NextLevel : MonoBehaviour {
+	public string nextLevel;
+
     void OnTriggerEnter() {
-        Application.LoadLevel ("Scene 2");
+		Application.LoadLevel (nextLevel);
     }
 }
