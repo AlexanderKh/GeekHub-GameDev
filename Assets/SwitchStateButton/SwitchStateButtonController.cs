@@ -3,7 +3,10 @@ using System.Collections;
 
 public class SwitchStateButtonController : MonoBehaviour {
 
+    public bool isScary = true;
+
     void interact() {
-        print ("YOLO");
+        isScary = !isScary;
+        EventManager.fireChangeRoomState (isScary);
     }
 }

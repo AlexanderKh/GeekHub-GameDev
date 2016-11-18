@@ -39,6 +39,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010265802498}
+  - 114: {fileID: 114000014050928352}
   m_Layer: 0
   m_Name: KindaLamp
   m_TagString: Untagged
@@ -58,7 +59,6 @@ GameObject:
   - 23: {fileID: 23000013102607676}
   - 54: {fileID: 54000010645376986}
   - 145: {fileID: 145000014270756820}
-  - 114: {fileID: 114000013744187060}
   m_Layer: 0
   m_Name: Lamp
   m_TagString: Untagged
@@ -288,7 +288,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -303,7 +303,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -318,7 +318,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -358,12 +358,12 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114000013744187060
+--- !u!114 &114000014050928352
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011340242396}
+  m_GameObject: {fileID: 1000010787288556}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 900c37a2e4f51214397eff38df08cece, type: 3}
@@ -371,7 +371,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxFlickeringTime: 0.75
   minFlickeringTime: 0.25
+  friendlyColor: {r: 1, g: 1, b: 1, a: 0}
+  friendlyIntensity: 5
   lightObj: {fileID: 1000014008706012}
+  lamp: {fileID: 1000011340242396}
 --- !u!136 &136000011124716978
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -409,8 +412,8 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: -0.4190671, y: 0.43279076, z: -0.3808778}
   serializedVersion: 2
-  m_Spring: 30
-  m_Damper: 1
+  m_Spring: 20
+  m_Damper: 0
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.025
@@ -429,8 +432,8 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: -1.0200005, z: 0}
   serializedVersion: 2
-  m_Spring: 30
-  m_Damper: 1
+  m_Spring: 20
+  m_Damper: 0
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.025
@@ -449,8 +452,8 @@ SpringJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.03999996, y: -1.0399995, z: 0.00000047683716}
   serializedVersion: 2
-  m_Spring: 30
-  m_Damper: 1
+  m_Spring: 20
+  m_Damper: 0
   m_MinDistance: 0
   m_MaxDistance: 0
   m_Tolerance: 0.025
