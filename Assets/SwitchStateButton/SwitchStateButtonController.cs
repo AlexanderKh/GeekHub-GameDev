@@ -7,6 +7,7 @@ public class SwitchStateButtonController : MonoBehaviour {
 
     void interact() {
         isScary = !isScary;
+        GetComponentInChildren<Animation> ().Play ();
         EventManager.fireChangeRoomState (isScary);
     }
 }
