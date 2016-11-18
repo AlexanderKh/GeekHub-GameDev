@@ -3153,6 +3153,21 @@ Prefab:
       propertyPath: m_ConnectedBody
       value: 
       objectReference: {fileID: 2106451508}
+    - target: {fileID: 145000010924182112, guid: ebd1d720cbbed324185524371ca1c8e2,
+        type: 2}
+      propertyPath: m_MaxDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 145000014270756820, guid: ebd1d720cbbed324185524371ca1c8e2,
+        type: 2}
+      propertyPath: m_MaxDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 145000010404659616, guid: ebd1d720cbbed324185524371ca1c8e2,
+        type: 2}
+      propertyPath: m_MaxDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebd1d720cbbed324185524371ca1c8e2, type: 2}
   m_IsPrefabParent: 0
