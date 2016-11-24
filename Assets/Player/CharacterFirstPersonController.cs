@@ -29,7 +29,8 @@ public class CharacterFirstPersonController : MonoBehaviour {
     }
 
     void moveCharacter () {
-        float translation = Input.GetAxis("Vertical") * speed;
+        int multiplier = Input.GetKey (KeyCode.LeftShift) ? 2 : 1;
+        float translation = Input.GetAxis("Vertical") * speed * multiplier;
         float straffe = Input.GetAxis("Horizontal") * speed;
     
         transform.Translate(straffe, 0, translation);
