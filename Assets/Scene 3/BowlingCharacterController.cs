@@ -17,7 +17,7 @@ public class BowlingCharacterController : MonoBehaviour {
         if (Input.GetButtonDown("Fire2")) {
             var o = Instantiate (prefab, self.position + camera.forward, Quaternion.identity) as Transform;
             var rb = o.GetComponent<Rigidbody> ();
-            rb.AddForce (camera.forward * 400);
+            rb.AddForce (camera.forward * 500);
         }
 	}
 }
