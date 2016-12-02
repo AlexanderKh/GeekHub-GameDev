@@ -21,7 +21,6 @@ public class CharacterFirstPersonController : MonoBehaviour {
             interact ();
             v = cam.transform.forward;
         }
-        Debug.DrawRay (cam.transform.position, v * 10);
 	}
 
     void FixedUpdate () {
