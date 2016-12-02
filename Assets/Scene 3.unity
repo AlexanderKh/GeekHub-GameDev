@@ -90,6 +90,11 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &59070320 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011422290462, guid: 86bb2ca63faf1014cb34b235daaa195f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1449106516}
 --- !u!1 &218607533
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4000011409191904, guid: 0a68ab844249a774481f0845b444df22, type: 2}
+  originalKegli: {fileID: 59070320}
+  prefabKegli: {fileID: 4000011422290462, guid: 86bb2ca63faf1014cb34b235daaa195f,
+    type: 2}
 --- !u!1 &508558092
 GameObject:
   m_ObjectHideFlags: 0
