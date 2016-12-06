@@ -19,16 +19,16 @@ public class CharacterFirstPersonController : MonoBehaviour
         if (Input.GetKeyDown ("escape"))
             Cursor.lockState = CursorLockMode.None;
         if (Input.GetButtonDown ("Fire1")) {
-            interact ();
+            Interact ();
         }
     }
 
     void FixedUpdate ()
     {
-        moveCharacter ();        
+        MoveCharacter ();        
     }
 
-    void moveCharacter ()
+    void MoveCharacter ()
     {
         int multiplier = Input.GetKey (KeyCode.LeftShift) ? 2 : 1;
         float translation = Input.GetAxis ("Vertical") * speed * multiplier;
@@ -37,13 +37,13 @@ public class CharacterFirstPersonController : MonoBehaviour
         transform.Translate (straffe, 0, translation);
     }
 
-    void interact ()
+    void Interact ()
     {
         RaycastHit hit;
         if (Physics.Raycast (cam.transform.position, cam.transform.forward, out hit, 2)) {
             GameObject go = hit.collider.gameObject;
             if (go.CompareTag ("Interactive")) {
-                go.BroadcastMessage ("interact", SendMessageOptions.DontRequireReceiver);
+                go.BroadcastMessage ("Interact", SendMessageOptions.DontRequireReceiver);
             }
         }
     }
