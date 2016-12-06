@@ -1,42 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterFirstPersonController : MonoBehaviour {
+public class CharacterFirstPersonController : MonoBehaviour
+{
 
     public float speed = 10.0F;
 
     private GameObject cam;
 
-	void Start () {
+    void Start ()
+    {
         cam = GetComponentInChildren<Camera> ().gameObject;
-	    Cursor.lockState = CursorLockMode.Locked;
-	}
-	
-	void Update () {
-        if (Input.GetKeyDown("escape"))
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void Update ()
+    {
+        if (Input.GetKeyDown ("escape"))
             Cursor.lockState = CursorLockMode.None;
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown ("Fire1")) {
             interact ();
         }
-	}
-
-    void FixedUpdate () {
-        moveCharacter();        
     }
 
-    void moveCharacter () {
+    void FixedUpdate ()
+    {
+        moveCharacter ();        
+    }
+
+    void moveCharacter ()
+    {
         int multiplier = Input.GetKey (KeyCode.LeftShift) ? 2 : 1;
-        float translation = Input.GetAxis("Vertical") * speed * multiplier;
-        float straffe = Input.GetAxis("Horizontal") * speed;
+        float translation = Input.GetAxis ("Vertical") * speed * multiplier;
+        float straffe = Input.GetAxis ("Horizontal") * speed;
     
-        transform.Translate(straffe, 0, translation);
+        transform.Translate (straffe, 0, translation);
     }
 
-    void interact() {
+    void interact ()
+    {
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 2)) {
+        if (Physics.Raycast (cam.transform.position, cam.transform.forward, out hit, 2)) {
             GameObject go = hit.collider.gameObject;
-            if (go.CompareTag("Interactive")) {
+            if (go.CompareTag ("Interactive")) {
                 go.BroadcastMessage ("interact", SendMessageOptions.DontRequireReceiver);
             }
         }
