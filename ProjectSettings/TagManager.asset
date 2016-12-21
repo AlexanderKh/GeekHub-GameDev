@@ -8,6 +8,7 @@ TagManager:
   - SF_Door
   - Interactive
   - Painting
+  - Ball
   layers:
   - Default
   - TransparentFX

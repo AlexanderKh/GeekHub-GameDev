@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BowlingCharacterController : MonoBehaviour
 {
+    public Text text;
 
     public Transform prefab;
 
@@ -39,6 +41,24 @@ public class BowlingCharacterController : MonoBehaviour
         if (Input.GetButtonDown ("Fire3")) {
             Destroy (originalKegli.gameObject);
             originalKegli = Instantiate (prefabKegli, originalKegliPosition, originalKegliRotation) as Transform;
+            foreach (GameObject ball in GameObject.FindGameObjectsWithTag("Ball")) {
+                Destroy (ball);
+            }
+            text.text = "";
         }
+    }
+
+    public void CalculateAndPrintScore() 
+    {
+        int kegliNumber = originalKegli.childCount;
+        int fallenKegli = 0;
+        for (int i = 0; i < kegliNumber; i++) {
+            Transform keglya = originalKegli.GetChild (i);
+            if (Vector3.Dot (keglya.up, Vector3.up) < 0.9F) {
+                fallenKegli++;
+            }
+        }
+
+        text.text = "Score is " + fallenKegli;
     }
 }
