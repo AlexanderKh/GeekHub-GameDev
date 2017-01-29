@@ -9,6 +9,7 @@ TagManager:
   - Interactive
   - Painting
   - Ball
+  - Planet Info Text
   layers:
   - Default
   - TransparentFX
