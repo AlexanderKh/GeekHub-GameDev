@@ -10,6 +10,7 @@ TagManager:
   - Painting
   - Ball
   - Planet Info Text
+  - Sun
   layers:
   - Default
   - TransparentFX
