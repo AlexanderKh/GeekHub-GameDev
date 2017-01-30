@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0.2794118, g: 0.2794118, b: 0.2794118, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -64,7 +64,7 @@ LightmapSettings:
     m_CompAOExponentDirect: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
-    m_LightmapsBakeMode: 1
+    m_LightmapsBakeMode: 0
     m_TextureCompression: 1
     m_DirectLightInLightProbes: 1
     m_FinalGather: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8976bfb45f2e31c468188d470e020bf5, type: 2}
   points: 100
-  width: 0.5
+  width: 0.75
   radius: 160
 --- !u!1 &282680469
 GameObject:
@@ -894,7 +894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8976bfb45f2e31c468188d470e020bf5, type: 2}
   points: 60
-  width: 0.5
+  width: 0.75
   radius: 45
 --- !u!1 &750876516
 GameObject:
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8976bfb45f2e31c468188d470e020bf5, type: 2}
   points: 120
-  width: 0.5
+  width: 0.75
   radius: 210
 --- !u!1 &1009378469
 GameObject:
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8976bfb45f2e31c468188d470e020bf5, type: 2}
   points: 120
-  width: 0.5
+  width: 0.75
   radius: 190
 --- !u!1 &1039903101
 GameObject:
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8976bfb45f2e31c468188d470e020bf5, type: 2}
   points: 60
-  width: 0.5
+  width: 0.75
   radius: 85
 --- !u!1001 &1066974566
 Prefab:
@@ -1408,7 +1408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8976bfb45f2e31c468188d470e020bf5, type: 2}
   points: 60
-  width: 0.5
+  width: 0.75
   radius: 70
 --- !u!1 &1234216023 stripped
 GameObject:
@@ -1886,7 +1886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8976bfb45f2e31c468188d470e020bf5, type: 2}
   points: 60
-  width: 0.5
+  width: 0.75
   radius: 55
 --- !u!1 &1633058502
 GameObject:
@@ -2390,7 +2390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8976bfb45f2e31c468188d470e020bf5, type: 2}
   points: 100
-  width: 0.5
+  width: 0.75
   radius: 120
 --- !u!1 &1964689452
 GameObject:
@@ -2417,29 +2417,29 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 2
-  m_Color: {r: 1, g: 0.942564, b: 0.834, a: 1}
+  m_Color: {r: 1, g: 0.955712, b: 0.872, a: 1}
   m_Intensity: 1
   m_Range: 1000
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0.2
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 10
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0.5
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1964689454
