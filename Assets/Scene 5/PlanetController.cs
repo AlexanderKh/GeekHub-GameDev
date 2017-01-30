@@ -39,6 +39,7 @@ public class PlanetController : MonoBehaviour
 	
     void OnMouseDown ()
     {
+        GetComponentInParent<PlanetsDeselector> ().DeselectPlanets ();
         planetInfoTextCtrl.SelectPlanet (name);
         UpdatePlanetText ();
         EnableHalo ();

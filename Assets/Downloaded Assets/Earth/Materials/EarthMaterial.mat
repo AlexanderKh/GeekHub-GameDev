@@ -171,7 +171,7 @@ Material:
       second: 0.03
     - first:
         name: _Smoothness
-      second: 0.6
+      second: 0
     - first:
         name: _SpecularPower
       second: 1
