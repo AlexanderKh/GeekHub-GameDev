@@ -19,7 +19,7 @@ public class UIController : MonoBehaviour
     {
         closestPaintingLabel.text = closestPaintingCalculator.GetClosestPaintingInfo().name;
         var cpd = closestPaintingCalculator.GetClosestPaintingDistance ();
-        if (cpd < 5f) {
+        if (cpd < 7.5f) {
             if (!showMoreButton.activeSelf) {
                 showMoreButton.SetActive (true);
             }
