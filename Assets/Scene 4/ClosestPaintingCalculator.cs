@@ -1,41 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 
-public class ClosestPaintingLabelController : MonoBehaviour
+public class ClosestPaintingCalculator : MonoBehaviour
 {
     private GameObject[] paintings;
     private GameObject player;
 
-    private Text text;
+    private GameObject closestPainting;
+    private float closestDistance;
 
     void Start ()
     {
         paintings = GameObject.FindGameObjectsWithTag ("Painting");
         player = GameObject.FindGameObjectWithTag ("Player");
-        text = GetComponent<Text> ();
+        closestPainting = paintings [0];
+        closestDistance = GetDistance (closestPainting, player);
     }
 
     void Update ()
     {
         if (paintings.GetLength (0) == 0) {
-            print ("bye");
             return;
         }
-        GameObject closest = paintings [0];
-        float closestDistance = GetDistance (closest, player);
+        closestDistance = GetDistance (closestPainting, player);
         foreach (var painting in paintings) {
             float distance = GetDistance (painting, player);
             if (distance < closestDistance) {
-                closest = painting;
+                closestPainting = painting;
                 closestDistance = distance;
             }
         }
-
-        text.text = closest.name;
     }
 
-    float GetDistance (GameObject a, GameObject b)
+    public GameObject GetClosestPaintingObject ()
+    {
+        return closestPainting;
+    }
+
+    public Painting GetClosestPaintingInfo ()
+    {
+        return PaintingsData.GetPaintingByKey (closestPainting.name);
+    }
+
+    public float GetClosestPaintingDistance ()
+    {
+        return closestDistance;
+    }
+
+    private float GetDistance (GameObject a, GameObject b)
     {
         var cuurentPaintingPosition = a.GetComponent<Transform> ().position;
         var lastClosestPaintingPosition = b.GetComponent<Transform> ().position;
