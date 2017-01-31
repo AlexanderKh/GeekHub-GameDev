@@ -12,4 +12,9 @@ public class Painting
         this.author = author;
         this.description = description;
     }
+
+    public string GetFormattedDescription ()
+    {
+        return string.Format("{0}\nAuthor: {1}\nDescription:\n{2}", name, author, description);
+    }
 }
