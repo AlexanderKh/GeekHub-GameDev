@@ -28,6 +28,7 @@ public class UIController : MonoBehaviour
             SafeSetActive (showMoreButton, true);
         } else {
             SafeSetActive (showMoreButton, false);
+            ClosePaintingInfo ();
         }
     }
 

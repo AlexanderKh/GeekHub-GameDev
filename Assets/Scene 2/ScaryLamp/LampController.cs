@@ -19,7 +19,6 @@ public class LampController : MonoBehaviour
     private bool swayAndFlicker = true;
 
     private Rigidbody rb;
-    private bool punched = false;
 
     void OnEnable ()
     {
