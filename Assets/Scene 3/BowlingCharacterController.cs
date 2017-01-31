@@ -38,7 +38,7 @@ public class BowlingCharacterController : MonoBehaviour
             rb.AddForce (camera.forward * throwForce);
             throwForce = 0;
         }
-        if (Input.GetButtonDown ("Fire3")) {
+        if (Input.GetKeyDown(KeyCode.Q)) {
             Destroy (originalKegli.gameObject);
             originalKegli = Instantiate (prefabKegli, originalKegliPosition, originalKegliRotation) as Transform;
             foreach (GameObject ball in GameObject.FindGameObjectsWithTag("Ball")) {

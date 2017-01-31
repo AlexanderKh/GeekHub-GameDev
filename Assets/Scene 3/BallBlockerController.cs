@@ -16,7 +16,7 @@ public class BallBlockerController : MonoBehaviour
 
     void Update ()
     {
-        if (Input.GetButtonDown ("Jump")) {
+        if (Input.GetKeyDown(KeyCode.E)) {
             isDown = !isDown;
             if (isDown) {
                 transform.DOMoveY (downY, 1);
